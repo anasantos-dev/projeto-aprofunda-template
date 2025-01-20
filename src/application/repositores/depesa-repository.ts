@@ -1,5 +1,6 @@
 import { Despesa } from '../../domain/despesa';
 
 export interface DespesaRepository {
-    //seu codigo aqui
+    save(despesa: Despesa): Promise<void>;
+    findAll(): Promise<Array<Despesa>>;
 }
